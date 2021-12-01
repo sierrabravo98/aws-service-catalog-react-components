@@ -26,7 +26,7 @@ import config from './config.json';
 
 Amplify.configure({
   Auth: {
-    region: 'us-west-2',
+    region: 'eu-west-1',
     identityPoolId: config.identityPoolId,
     userPoolId: config.userPoolId,
     userPoolWebClientId: config.userPoolWebClientId,

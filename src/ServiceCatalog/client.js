@@ -17,7 +17,8 @@
 import ServiceCatalog from "aws-sdk/clients/servicecatalog";
 
 const getServiceCatalogClient = async (credentials, region) => {
-  let awsRegion = !region ? 'us-west-2' : region;
+  //let awsRegion = !region ? 'us-west-2' : region;
+  let awsRegion = 'eu-west-1';
   return new ServiceCatalog({
     region: awsRegion,
     credentials,
