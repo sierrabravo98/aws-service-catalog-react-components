@@ -15,10 +15,10 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 import ServiceCatalog from "aws-sdk/clients/servicecatalog";
-
+var awsRegion = 'eu-west-1';
 const getServiceCatalogClient = async (credentials, region) => {
   //let awsRegion = !region ? 'us-west-2' : region;
-  var awsRegion = 'eu-west-1';
+  
   return new ServiceCatalog({
     region: awsRegion,
     credentials,
