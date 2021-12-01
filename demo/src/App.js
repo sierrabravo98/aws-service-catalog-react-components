@@ -18,12 +18,16 @@ import React, { Component } from 'react';
 import { Auth } from 'aws-amplify';
 import { withAuthenticator } from 'aws-amplify-react';
 import { NotificationManager, NotificationContainer } from 'react-notifications';
-import {
-  SCProducts,
-  SCProvisionModal,
-  SCProvisionedProducts,
-  SCProvisionedDetailsModal,
-} from "aws-service-catalog-react-components";
+import Products  from './Products.js';
+import ProvisionedDetailsModal from './ProvisionedDetailsModal.js';
+import ProvisionedProducts from './ProvisionedProducts.js';
+import ProvisionProductModal from './ProvisionProductModal.js';
+//import {
+  //Products,
+  //ProvisionProductModal,
+  //ProvisionedProducts,
+  //ProvisionedDetailsModal,
+//} from "aws-service-catalog-react-components";
 import './App.css';
 
 class App extends Component {
@@ -100,7 +104,7 @@ class App extends Component {
     }
 
     return (
-      <SCProvisionModal
+      <ProvisionProductModal
         show={showProvisionModal}
         credentials={this.state.credentials}
         onCancel={this.onCloseModal}
@@ -118,7 +122,7 @@ class App extends Component {
       return null;
     }
     return (
-      <SCProvisionedDetailsModal
+      <ProvisionedDetailsModal
         show={this.state.showDetailsModal}
         credentials={this.state.credentials}
         recordId={this.state.detailsRecordId}
@@ -140,7 +144,7 @@ class App extends Component {
         <div className="row">
           <div className="col-md-8 col-md-offset-2">
             <h3 className="page-header">Product Catalog</h3>
-            <SCProducts
+            <Products
               credentials={this.state.credentials}
               onLaunchClick={this.onLaunchClick}
             />
@@ -149,7 +153,7 @@ class App extends Component {
         <div className="row">
           <div className="col-md-8 col-md-offset-2">
             <h3 className="page-header">My Provisioned Products</h3>
-            <SCProvisionedProducts
+            <ProvisionedProducts
               credentials={this.state.credentials}
               onTerminate={this.onTerminateProduct}
               onError={this.onError}
