@@ -13,7 +13,7 @@
     "url": "https://github.com/awslabs/aws-service-catalog-react-components"
   },
   "peerDependencies": {
-    "bootstrap": "^3.3.0",
+    "bootstrap": "^3.4.1",
     "react": "^16.0.0"
   },
   "dependencies": {
@@ -37,7 +37,7 @@
     "@babel/plugin-transform-react-jsx": "^7.8.3",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
-    "babel-jest": "^25.1.0",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
     "enzyme": "^3.3.0",
